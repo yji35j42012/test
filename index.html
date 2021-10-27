@@ -11,31 +11,14 @@
 		* {
 			margin: 0;
 			padding: 0;
-		}
-
-		/* html,
-		body {
-			width: 100%;
-			height: 100%;
-		}
-
-		html {
-			overflow-x: hidden;
-		} */
-		* {
-			margin: 0;
-			padding: 0;
 			-webkit-box-sizing: border-box;
 			box-sizing: border-box
 		}
 
-		html {
-			height: 100%;
-			-webkit-overflow-scrolling: touch
-		}
-
+		html,
 		body {
-			min-height: 100%
+			width: 100%;
+			height: 100%;
 		}
 
 		.wrap {
@@ -68,10 +51,20 @@
 		.item:nth-child(even) {
 			background-color: antiquewhite;
 		}
+
+		.bodyScroll {
+			overflow-x: hidden;
+			overflow-y: auto;
+		}
+
+		.insideScroll .info {
+			overflow-x: hidden;
+			overflow-y: auto;
+		}
 	</style>
 </head>
 
-<body id="body">
+<body id="body" class="bodyScroll">
 	<div class="wrap">
 		<header>頂部</header>
 		<div class="info">
@@ -79,6 +72,8 @@
 				<button onclick="changeBodyH('100%')">body改100%</button>
 				<button onclick="changeBodyH('100vh')">body改100vh</button>
 				<button onclick="changeBodyH('100vh')">body改none</button>
+				<button onclick="sss('body')">捲軸開在body</button>
+				<button onclick="sss('inside')">捲軸開在內部</button>
 			</div>
 			<div class="item"></div>
 			<div class="item"></div>
@@ -93,6 +88,15 @@
 		function changeBodyH(str) {
 			console.log(str);
 			bodyH.style.height = str;
+		}
+		function sss(str) {
+			if (str == 'body') {
+				bodyH.classList.remove('insideScroll');
+				bodyH.classList.add('bodyScroll');
+			} else {
+				bodyH.classList.remove('bodyScroll');
+				bodyH.classList.add('insideScroll');
+			}
 		}
 	</script>
 
