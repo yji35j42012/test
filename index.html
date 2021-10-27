@@ -64,8 +64,9 @@
 				<button onclick="changeBodyH('100%')">body改100%</button>
 				<button onclick="changeBodyH('100vh')">body改100vh</button>
 				<button onclick="changeBodyH('100vh')">body改none</button>
+				<button onclick="bodyHandler()">bodyHandler</button>
 			</div>
-			<div class="item">aaa</div>
+			<div class="item"></div>
 			<div class="item"></div>
 			<div class="item"></div>
 			<div class="item"></div>
@@ -79,8 +80,15 @@
 			console.log(str);
 			bodyH.style.height = str;
 		}
+		function bodyHandler() {
+			if (document.documentElement.scrollHeight <= document.documentElement.clientHeight) {
+				bodyTag = document.getElementsByTagName('body')[0];
+				bodyTag.style.height = document.documentElement.clientWidth / screen.width * screen.height + 'px';
+			}
+		}
+
 	</script>
-	<script>window.addEventListener("load", function () { setTimeout('window.scrollTo(0,1);', 1); }, false);</script>
+
 </body>
 
 </html>
