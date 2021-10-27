@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html id="html" lang="en">
 
 <head>
 	<meta charset="UTF-8">
@@ -69,6 +69,12 @@
 		<header>頂部</header>
 		<div class="info">
 			<div class="item">
+				<div>html Tag狀態: <span id="htmlTag"></span></div>
+				<div>body Tag狀態: <span id="bodyTag"></span></div>
+			</div>
+			<div class="item">
+				<button onclick="changeHtmlH('100%')">html改100%</button>
+				<button onclick="changeHtmlH('100vh')">html改100vh</button>
 				<button onclick="changeBodyH('100%')">body改100%</button>
 				<button onclick="changeBodyH('100vh')">body改100vh</button>
 				<button onclick="changeBodyH('100vh')">body改none</button>
@@ -78,16 +84,24 @@
 			<div class="item"></div>
 			<div class="item"></div>
 			<div class="item"></div>
-			<div class="item"></div>
 
 		</div>
 	</div>
 
 	<script>
-		var bodyH = document.getElementById("body")
+		var htmlH = document.querySelector("#html")
+		var bodyH = document.querySelector("#body")
+		var htmlTag = document.getElementById("htmlTag")
+		var bodyTag = document.getElementById("bodyTag")
+		function changeHtmlH(str) {
+			console.log(str);
+			htmlH.style.height = str;
+			showTag()
+		}
 		function changeBodyH(str) {
 			console.log(str);
 			bodyH.style.height = str;
+			showTag()
 		}
 		function sss(str) {
 			if (str == 'body') {
@@ -97,6 +111,13 @@
 				bodyH.classList.remove('bodyScroll');
 				bodyH.classList.add('insideScroll');
 			}
+			showTag()
+		}
+
+		showTag()
+		function showTag() {
+			htmlTag.innerHTML = htmlH.offsetHeight;
+			bodyTag.innerHTML = bodyH.offsetHeight;
 		}
 	</script>
 
