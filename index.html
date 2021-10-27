@@ -38,13 +38,22 @@
 	</style>
 </head>
 
-<body>
+<body id="body">
 	<div class="wrap">
 		<header>頂部</header>
 		<div class="info">
-			<button>改變</button>
+			<button onclick="changeBodyH('100%')">body改100%</button>
+			<button onclick="changeBodyH('100vh')">body改100vh</button>
 		</div>
 	</div>
+
+	<script>
+		var bodyH = document.getElementById("body")
+		function changeBodyH(str) {
+			console.log(str);
+			bodyH.style.height = str;
+		}
+	</script>
 </body>
 
 </html>
