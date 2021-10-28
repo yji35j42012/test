@@ -25,110 +25,11 @@
 			overflow-y: auto;
 			height: 100vh;
 		}
-
-		/* .wrap {
-			width: 100%;
-			height: 100%;
-			background-color: #eee;
-		}
-
-		header {
-			width: 100%;
-			height: 50px;
-			background-color: pink;
-		}
-
-		.info {
-			width: 100%;
-			height: calc(100% - 50px);
-			background-color: #ccc;
-		}
-
-		.item {
-			width: 100%;
-			height: 200px;
-		}
-
-		.item:nth-child(odd) {
-			background-color: aqua;
-		}
-
-		.item:nth-child(even) {
-			background-color: antiquewhite;
-		} */
-
-		/* .bodyScroll body {
-			overflow-x: hidden;
-			overflow-y: auto;
-		}
-
-		.insideScroll .info {
-			overflow-x: hidden;
-			overflow-y: auto;
-		} */
 	</style>
 </head>
 
-<body id="body" class="">
-	<div class="wrap" style="color: #000; height:2000px;">
-999
-	</div>
-	<!-- <div class="wrap">
-		<header>頂部1</header>
-		<div class="info">
-			<div class="item">
-				<div>html Tag狀態: <span id="htmlTag"></span></div>
-				<div>body Tag狀態: <span id="bodyTag"></span></div>
-			</div>
-			<div class="item">
-				<button onclick="changeHtmlH('100%')">html改100%</button>
-				<button onclick="changeHtmlH('100vh')">html改100vh</button>
-				<button onclick="changeBodyH('100%')">body改100%</button>
-				<button onclick="changeBodyH('100vh')">body改100vh</button>
-				<button onclick="changeBodyH('100vh')">body改none</button>
-				<button onclick="sss('body')">捲軸開在body</button>
-				<button onclick="sss('inside')">捲軸開在內部</button>
-			</div>
-			<div class="item"></div>
-			<div class="item"></div>
-			<div class="item"></div>
-
-		</div>
-	</div>
-
-	<script>
-		var htmlH = document.querySelector("#html")
-		var bodyH = document.querySelector("#body")
-		var htmlTag = document.getElementById("htmlTag")
-		var bodyTag = document.getElementById("bodyTag")
-		function changeHtmlH(str) {
-			console.log(str);
-			htmlH.style.height = str;
-			showTag()
-		}
-		function changeBodyH(str) {
-			console.log(str);
-			bodyH.style.height = str;
-			showTag()
-		}
-		function sss(str) {
-			if (str == 'body') {
-				bodyH.classList.remove('insideScroll');
-				bodyH.classList.add('bodyScroll');
-			} else {
-				bodyH.classList.remove('bodyScroll');
-				bodyH.classList.add('insideScroll');
-			}
-			showTag()
-		}
-
-		showTag()
-		function showTag() {
-			htmlTag.innerHTML = htmlH.offsetHeight;
-			bodyTag.innerHTML = bodyH.offsetHeight;
-		}
-	</script> -->
-
+<body>
+	<div style="height: 2000px">32</div>
 </body>
 
 </html>
