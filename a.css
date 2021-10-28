@@ -160,11 +160,8 @@ blockquote {
 blockquote p:last-child {
     margin: 0;
 }
-aside p,
-aside address {
-    color: var(--cp-color-8);
-    font-style: normal;
-}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -174,9 +171,4 @@ aside address {
 html {
     height: 100%;
     -webkit-overflow-scrolling: touch;
-}
-
-.preload * {
-    -webkit-transition: none !important;
-    transition: none !important;
 }
