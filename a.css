@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import 'https://fonts.googleapis.com/css?family=Lato:300,400,400italic,700,700italic,900,900italic&display=swap';
+
 :root {
     --cp-sidebar-width: 188px;
     --cp-sidebar-fixed-height: 700px;
@@ -322,56 +322,4 @@ fieldset {
     border: 1px solid var(--cp-color-11);
     padding: 10px;
     margin: 0 0 10px;
-}
-legend {
-    padding: 0 10px;
-}
-.page-wrap {
-    position: relative;
-    padding: 20px 20px 50px;
-}
-.screen-reader-text {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-}
-.visually-hidden {
-    position: absolute !important;
-    top: -9999px;
-    left: -9999px;
-}
-.mobile-break {
-    display: none;
-}
-@media (max-width: 550px) {
-    .mobile-break {
-        display: block;
-    }
-}
-textarea:focus,
-textarea:active {
-    outline: 0;
-}
-[disabled],
-.disabled,
-.faded {
-    opacity: 0.5 !important;
-    cursor: default !important;
-    pointer-events: none;
-}
-body.admin-logged-in-as-user {
-    padding-top: 16px !important;
-}
-body.admin-logged-in-as-user::before {
-    content: '⚠️ ADMIN LOGGED IN AS USER - Log out to switch back to admin.';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    background: red;
-    color: #fff;
-    z-index: 999;
-    font-size: 11px;
-    height: 16px;
 }
