@@ -118,49 +118,6 @@
     background: var(--cp-color-20);
     color: var(--cp-color-1);
 }
-@font-face {
-    font-family: telefon black;
-    src: url(./telefon/black/telefon-black.woff) format('woff'),
-        url(./telefon/black/telefon-black.woff2) format('woff2');
-}
-@font-face {
-    font-family: telefon;
-    src: url(./telefon/bold/telefon-bold.woff) format('woff'),
-        url(./telefon/bold/telefon-bold.woff2) format('woff2');
-}
-html {
-    font-family: var(--cp-font-family);
-    line-height: 1.5;
-    font-size: 15px;
-    font-weight: 400;
-}
-@media (max-width: 830px) {
-    html {
-        font-size: 14px;
-    }
-}
-@media (max-width: 550px) {
-    html {
-        font-size: 13px;
-    }
-}
-
-time {
-    color: var(--cp-color-7);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    font-size: 80%;
-}
-blockquote {
-    padding: 0.5rem 1rem 0.625rem;
-    border-left: 2px solid var(--cp-color-blue);
-    background: var(--cp-color-2);
-    color: var(--cp-color-11);
-}
-blockquote p:last-child {
-    margin: 0;
-}
-
 
 * {
     margin: 0;
