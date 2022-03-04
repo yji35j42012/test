@@ -104,8 +104,8 @@
     </style>
 </head>
 
-<body>
-    <div id="app" class="wrap" :style="sty">
+<body id="body">
+    <div id="app" class="wrap" :style="">
         <header class="title">
             <span>{{title}}</span>
 
@@ -144,7 +144,10 @@
             methods: {
                 changeState(str) {
                     this.nowState = str;
+                    let bodyStyle = document.getElementById('body');
                     this.sty = 'overscroll-behavior:' + str
+                    bodyStyle.style= this.sty;
+                    
                 }
             }
         })
