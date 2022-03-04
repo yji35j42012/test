@@ -23,12 +23,22 @@
             position: fixed;
             overflow-x: hidden;
             overflow-y: auto;
-            overscroll-behavior: contain;
-            top: 0;right: 0;
+            top: 0;
+            right: 0;
             width: 100px;
             height: 100px;
             border: 1px solid #000;
             background: rgba(0, 0, 0, .5);
+        }
+
+        .a1 {
+
+            overscroll-behavior: auto;
+        }
+
+        .a2 {
+
+            overscroll-behavior: contain;
         }
     </style>
 </head>
@@ -88,8 +98,15 @@
             <li>50</li>
         </ul>
 
-        <div class="alert">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, quos! Ipsum harum animi nemo assumenda iusto officiis iste, sed odio officia. Provident illum unde ut reprehenderit numquam magnam corrupti aut.
+        <div class="alert a1">
+            我會滑到後面
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, quos! Ipsum harum animi nemo assumenda
+            iusto officiis iste, sed odio officia. Provident illum unde ut reprehenderit numquam magnam corrupti aut.
+        </div>
+        <div class="alert a1">
+            我不會滑到後面
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, quos! Ipsum harum animi nemo assumenda
+            iusto officiis iste, sed odio officia. Provident illum unde ut reprehenderit numquam magnam corrupti aut.
         </div>
     </div>
 </body>
