@@ -144,6 +144,9 @@
             </ul>
         </header>
         <ul class="ul_content">
+            <li>
+                body overflow 狀態:{{}}
+            </li>
             <li v-for="(item,index) in 50">
                 Email:{{index + 3}}
             </li>
@@ -175,6 +178,7 @@
             el: '#app',
             data() {
                 return {
+                    bodyflow:'',
                     title: "aaa",
                     nowState: 'none',
                     sty: "overscroll-behavior: none;",
