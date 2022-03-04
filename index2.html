@@ -40,6 +40,12 @@
             right: 0;
             overscroll-behavior: contain;
         }
+        .a3 {
+            left: 0;
+            right: 0;
+            margin: auto;
+            overscroll-behavior: none;
+        }
     </style>
 </head>
 
@@ -99,12 +105,17 @@
         </ul>
 
         <div class="alert a1">
-            我會滑到後面
+                overscroll-behavior: auto;
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, quos! Ipsum harum animi nemo assumenda
             iusto officiis iste, sed odio officia. Provident illum unde ut reprehenderit numquam magnam corrupti aut.
         </div>
         <div class="alert a1">
-            我不會滑到後面
+                overscroll-behavior: contain;
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, quos! Ipsum harum animi nemo assumenda
+            iusto officiis iste, sed odio officia. Provident illum unde ut reprehenderit numquam magnam corrupti aut.
+        </div>
+        <div class="alert a3">
+                overscroll-behavior: none;
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, quos! Ipsum harum animi nemo assumenda
             iusto officiis iste, sed odio officia. Provident illum unde ut reprehenderit numquam magnam corrupti aut.
         </div>
