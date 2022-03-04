@@ -11,15 +11,53 @@
             margin: 0;
             padding: 0;
             list-style: none;
+            box-sizing: border-box;
         }
 
         html,
         body {
-            width: 100vh;
+            width: 100%;
             height: 100vh;
         }
 
-        .alert {
+        .wrap {
+            width: 100%;
+            height: 100%;
+        }
+
+        .title {
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 60px;
+            padding: 0 8px;
+            background: #f44336;
+            color: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 2;
+        }
+
+        .ul_content {
+            width: 100%;
+            padding-top: 60px;
+        }
+
+        .ul_content li {
+            width: 100%;
+            margin: 0;
+            padding: 16px 8px;
+            border-top: 1px solid #ccc;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* .alert {
             position: fixed;
             overflow-x: hidden;
             overflow-y: auto;
@@ -47,81 +85,37 @@
         .a3 {
             bottom: 0;
             overscroll-behavior: none;
-        }
+        } */
     </style>
 </head>
 
 <body>
-    <div class="wrap">
-        <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-            <li>6</li>
-            <li>7</li>
-            <li>8</li>
-            <li>9</li>
-            <li>10</li>
-            <li>11</li>
-            <li>12</li>
-            <li>13</li>
-            <li>14</li>
-            <li>15</li>
-            <li>16</li>
-            <li>17</li>
-            <li>18</li>
-            <li>19</li>
-            <li>20</li>
-            <li>21</li>
-            <li>22</li>
-            <li>23</li>
-            <li>24</li>
-            <li>25</li>
-            <li>26</li>
-            <li>27</li>
-            <li>28</li>
-            <li>29</li>
-            <li>30</li>
-            <li>31</li>
-            <li>32</li>
-            <li>33</li>
-            <li>34</li>
-            <li>35</li>
-            <li>36</li>
-            <li>37</li>
-            <li>38</li>
-            <li>39</li>
-            <li>40</li>
-            <li>41</li>
-            <li>42</li>
-            <li>43</li>
-            <li>44</li>
-            <li>45</li>
-            <li>46</li>
-            <li>47</li>
-            <li>48</li>
-            <li>49</li>
-            <li>50</li>
+    <div id="app" class="wrap">
+        <header class="title">
+            {{title}}
+        </header>
+        <ul class="ul_content">
+            <li v-for="(item,index) in 50">
+                Email:{{index + 1}}
+            </li>
         </ul>
-
-        <div class="alert a1">
-            overscroll-behavior: auto;
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, quos! Ipsum harum animi nemo assumenda
-            iusto officiis iste, sed odio officia. Provident illum unde ut reprehenderit numquam magnam corrupti aut.
-        </div>
-        <div class="alert a2">
-            overscroll-behavior: contain;
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, quos! Ipsum harum animi nemo assumenda
-            iusto officiis iste, sed odio officia. Provident illum unde ut reprehenderit numquam magnam corrupti aut.
-        </div>
-        <div class="alert a3">
-            overscroll-behavior: none;
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, quos! Ipsum harum animi nemo assumenda
-            iusto officiis iste, sed odio officia. Provident illum unde ut reprehenderit numquam magnam corrupti aut.
-        </div>
+        <div class="chah"></div>
     </div>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.9/vue.min.js'
+        integrity='sha512-deBbW1lpMT6h3gvOzmeMPft4pf9CMGjCKc5jSNq2pMSjtkMPuELbd4N3LKXVq/t1t6qco4q3u/XguyqGqlOMjA=='
+        crossorigin='anonymous'></script>
+
+    <script>
+        let vue = new Vue({
+            el: '#app',
+            data() {
+                return {
+                    title: "aaa"
+                }
+            }
+        })
+    </script>
 </body>
 
 </html>
