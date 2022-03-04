@@ -15,36 +15,37 @@
 
         html,
         body {
-            width: 100%;
-            height: 100%;
+            width: 100vh;
+            height: 100vh;
         }
 
         .alert {
             position: fixed;
             overflow-x: hidden;
             overflow-y: auto;
-            top: 0;
             width: 150px;
             height: 150px;
             border: 1px solid #000;
-            background: rgba(0, 0, 0, .5);
+            background: rgba(0, 0, 0, 1);
             z-index: 1;
+            right: 0;
+            color: #fff;
         }
 
         .a1 {
-            left: 0;
+            top: 0;
             overscroll-behavior: auto;
         }
 
         .a2 {
-
-            right: 0;
+            top: 0px;
+            bottom: 0;
+            margin: auto;
             overscroll-behavior: contain;
         }
+
         .a3 {
-            left: 0;
-            right: 0;
-            margin: auto;
+            bottom: 0;
             overscroll-behavior: none;
         }
     </style>
@@ -106,17 +107,17 @@
         </ul>
 
         <div class="alert a1">
-                overscroll-behavior: auto;
+            overscroll-behavior: auto;
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, quos! Ipsum harum animi nemo assumenda
             iusto officiis iste, sed odio officia. Provident illum unde ut reprehenderit numquam magnam corrupti aut.
         </div>
         <div class="alert a2">
-                overscroll-behavior: contain;
+            overscroll-behavior: contain;
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, quos! Ipsum harum animi nemo assumenda
             iusto officiis iste, sed odio officia. Provident illum unde ut reprehenderit numquam magnam corrupti aut.
         </div>
         <div class="alert a3">
-                overscroll-behavior: none;
+            overscroll-behavior: none;
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, quos! Ipsum harum animi nemo assumenda
             iusto officiis iste, sed odio officia. Provident illum unde ut reprehenderit numquam magnam corrupti aut.
         </div>
